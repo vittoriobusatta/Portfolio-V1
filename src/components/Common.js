@@ -17,7 +17,7 @@ export const ancient = "Ancient"
 
 export const LinksA = styled.a`
   position: relative;
-  font-size: max(1.4rem);
+  font-size: max(1.2rem);
   writing-mode: vertical-lr;
   color: ${props => props.isLight === true ? secondLightColor : secondColor};
   font-family: ${roboto};

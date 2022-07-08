@@ -9,17 +9,14 @@ import ContactPage from './components/ContactPage';
 import Projects from './components/Projects';
 import {secondColor, primaryLightColor, primaryColor, secondLightColor, thirdLightColor, thirdColor} from './components/Common';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { logDOM } from '@testing-library/react';
 
 const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    @media (min-width: 1400px) {
-      font-size: 80%;
-    }
-    @media (max-width: 1100px) {
+
+    @media (max-width: 1200px) {
       font-size: 50%;
     }
     @media (max-width: 850px) {
@@ -73,10 +70,14 @@ function App() {
     return window.matchMedia("(max-width: 850px)").matches
   }
 
+  /*  Si le menu est ouvert, ne pas déclancher l'animation du scroll,
+    sinon 
+  */
+
   useEffect(() => {
     function onScroll() {
       let navBar = document.getElementById("navbar")
-      if (!checkIsMobile()) {
+      if (!checkIsMobile())  {
         navBar.style.top = "0";
         return 
       }

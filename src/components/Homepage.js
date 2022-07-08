@@ -36,7 +36,7 @@ const landing = ({lightMode, setlightMode}) => {
   return (
     <HomePageContainer isLight={lightMode}>
       <DarkBtn setlightMode={setlightMode} lightMode={lightMode}/>
-      <Landing setlightMode={setlightMode} lightMode={lightMode}/>
+      {/* <Landing setlightMode={setlightMode} lightMode={lightMode}/> */}
       <Marquee setlightMode={setlightMode} lightMode={lightMode}/>
       <Education setlightMode={setlightMode} lightMode={lightMode}/>
       <Marquee2 setlightMode={setlightMode} lightMode={lightMode}/>

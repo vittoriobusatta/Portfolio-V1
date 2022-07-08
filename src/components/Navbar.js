@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from "react";
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {ReactComponent as DribbleIcon} from '../icons/dribbble.svg';
@@ -26,6 +25,7 @@ const NavbarContainer = styled.section`
   @media (max-width: 850px) {
     height: 100px;
     border-right: none;
+    border-bottom: 2px solid ${props => props.isLight === true ? thirdLightColor : thirdColor};
     width: 100%;
     max-width: 100%;
   }
@@ -109,11 +109,11 @@ const Bar = styled.div`
   
   &.bar1 {
     top: 0;
-    transform:${props => props.isActive === true ?  'translate3d(0, 15px, 0) rotate(-225deg)' : 'translateY(10px)' };
+    transform:${props => props.isActive === true ?  'translate3d(0, 18px, 0) rotate(-225deg)' : 'translateY(10px)' };
   }
   &.bar2 {
     bottom: 0;
-    transform:${props => props.isActive === true ?  'translate3d(0, -7px, 0) rotate(225deg)' : 'translateY(-10px)' };
+    transform:${props => props.isActive === true ?  'translate3d(0, -19px, 0) rotate(225deg)' : 'translateY(-10px)' };
   }
 
   @media (max-width: 280px) {
@@ -122,50 +122,21 @@ const Bar = styled.div`
 `
 const BurgerContainer = styled.button`
   position: relative;
-  height: ${props => props.isActive === true ?  24 + "px" : 40 + "px"};
+  height: 40px;
   width: 50px;
   background: none;
   border: none;
   margin-bottom: max(6rem, 20px);
 
-  ${props => console.log('isActive', props.isActive)}
-
-
   &:hover > .bar1{
-      transform: ${props => props.isActive === true ?    'translate3d(0, 16px, 0) rotate(45deg)' : 'translate3d(0, 10px, 0) rotate(-180deg)' };
+      transform: ${props => props.isActive === true ?    'translate3d(0, 18px, 0) rotate(45deg)' : 'translate3d(0, 10px, 0) rotate(-180deg)' };
   }
   &:hover > .bar2{
-    transform: ${props => props.isActive === true ?    'translate3d(0, -4px, 0) rotate(495deg)' : 'translateY(-10px) rotate(-180deg)' };
+    transform: ${props => props.isActive === true ?    'translate3d(0, -19px, 0) rotate(495deg)' : 'translateY(-10px) rotate(-180deg)' };
   } 
 
-  
-
-  /* Si HOVER un Burger ACTIVE
-
-    &:hover > .bar1{
-        transform: translate3d(0, 15px, 0) rotate(45deg);
-    }
-    &:hover > .bar2{
-        transform: translate3d(0, -22px, 0) rotate(495deg);
-    } 
-    
-    Si HOVER un Burger NO ACTIVE
-
-    &:hover > .bar1{
-      transform: translate3d(0, 10px, 0) rotate(-180deg);
-    }
-    &:hover > .bar2{
-      transform: translateY(-10px) rotate(-180deg);
-    } 
-
-  */ 
-
   @media (max-width: 850px) {
-    width: 55px;
     margin-bottom: 0;
-  }
-  @media (max-width: 280px) {
-    width: 50px;
   }
 `
 
@@ -281,7 +252,6 @@ const Navbar = ({openMenu, setOpenMenu, lightMode, openContact, setOpenContact, 
 
   const ClickMenu = () => {
     setOpenMenu(!openMenu)
-    // setCheckActive(!checkActive)
   }
 
   const ClickContact = () => {
@@ -295,11 +265,6 @@ const Navbar = ({openMenu, setOpenMenu, lightMode, openContact, setOpenContact, 
     setOpenMenu(false)
     setOpenContact(false)
   }
-
-  // const [checkActive, setCheckActive] = useState(true)
-
-  // console.log(checkActive, "active");
-  console.log(openMenu);
 
 
   return (

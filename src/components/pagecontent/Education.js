@@ -8,14 +8,18 @@ const EducationContainer = styled.section`
     height: 100vh;
     width: 100%;
     display: flex;
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
     flex-direction: column;
+    height: 120vh;
+  }
+    @media (max-width: 850px) {
+    height: 100vh;
   }
 `
 const EducationContainerLeft = styled.div`
     height: 100%;
     width: 45%;
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         width: 100%;
         display: inline-flex;
         height: 25%;
@@ -24,9 +28,9 @@ const EducationContainerLeft = styled.div`
 const EducationContainerRight = styled.div`
     height: 100%;
     width: 55%;
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         width: 100%;
-        height: 65%;
+        height: 75%;
     }
 `
 
@@ -37,7 +41,7 @@ const CuriculumContainer = styled.div `
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         height: 100%;
     }
 `
@@ -59,7 +63,7 @@ const CuriculumContent = styled.div `
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         justify-content: flex-end;
         align-items: center;
     }
@@ -103,6 +107,8 @@ const CompilationSpan = styled.div`
     color: ${props => props.isLight === true ? fourthLightColor : fourthColor};
     font-size: max(3rem, 15px);
     font-family: ${roboto};
+    line-height: 5rem;
+
 ` 
 const CompilationName = styled.span`
     color: ${props => props.isLight === true ? fourthLightColor : fourthColor};
@@ -184,6 +190,13 @@ function education({lightMode, setlightMode}) {
         </EducationContainerLeft>
 
         <EducationContainerRight>
+
+            {/* <ScolarityContainer>
+                <ScolarityContent>
+                    
+                </ScolarityContent>
+            </ScolarityContainer> */}
+
             <div style={{height: 100 + "%", width: 100 + "%", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div style={{height: 80 + "%", width: 100 + "%"}}>
                     <div style={{height: 100 + "%", width: 100 + "%", display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
@@ -215,7 +228,6 @@ function education({lightMode, setlightMode}) {
                                             <Paragraph isLight={lightMode}>
                                             Spécialité SISR (Solutions d'Infrastructure, Systèmes et Réseaux),
                                             Lycée Nelson Mandela, Bras-Fusil, La Réunion
-
                                             </Paragraph>
                                         </div>
                                     </div>
