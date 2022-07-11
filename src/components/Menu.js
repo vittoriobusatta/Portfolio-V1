@@ -12,7 +12,7 @@ const MenuContainer = styled.section`
   z-index: ${props => props.isActive === true ? 1 : -1};
   transition: all .2s ease-in;
   @media (min-width: 1400px) {
-    width: calc(100% - 150px);
+    width: calc(100% - 120px);
   }
   @media (max-width: 850px){
     width: 100%;

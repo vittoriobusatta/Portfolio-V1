@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {secondColor, thirdLightColor, primaryColor, primaryLightColor, EmSpace, OldchildContent, Title, Number, ContainerTitle, roboto, fourthLightColor} from './Common';
+import { primaryColor, primaryLightColor, EmSpace, OldchildContent, Title, Number, ContainerTitle} from './Common';
 
 
 const ContactContainer = styled.section`
@@ -10,7 +10,7 @@ const ContactContainer = styled.section`
   position: relative;
 
   @media (min-width: 1400px) {
-    width: calc(100% - 150px);
+    width: calc(100% - 120px);
   }
 
   @media (max-width: 850px) {

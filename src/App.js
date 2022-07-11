@@ -7,6 +7,7 @@ import Menu from './components/Menu'
 import HomePage from './components/Homepage';
 import ContactPage from './components/ContactPage';
 import Projects from './components/Projects';
+import ProjectsBtn from './components/ProjectsBtn';
 import {secondColor, primaryLightColor, primaryColor, secondLightColor, thirdLightColor, thirdColor} from './components/Common';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    transition: all .3s ease-in;
 
     @media (max-width: 1200px) {
       font-size: 50%;
@@ -115,11 +117,13 @@ function App() {
         <Routes>
           <Route path="/" element={ <HomePage setlightMode={setlightMode} lightMode={lightMode}/>} />
           <Route path="contact" element={<ContactPage setlightMode={setlightMode} lightMode={lightMode}/>} />
+          <Route path="projects" element={<Projects setlightMode={setlightMode} lightMode={lightMode}/>} />
         </Routes>
+      
+      {<ProjectsBtn setlightMode={setlightMode} lightMode={lightMode}/>}
         
       </BrowserRouter>
 
-      <Projects setlightMode={setlightMode} lightMode={lightMode}/>
       {/* {openContact && <ContactPage setlightMode={setlightMode} lightMode={lightMode}/>} */}
 
     </div>

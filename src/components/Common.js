@@ -27,6 +27,34 @@ export const LinksA = styled.a`
   'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
 `
 
+export const ProjectsLinks = styled.a`
+  position: relative;
+  font-family: ${morgenWalsh};
+  font-style: normal;
+  font-weight: 400;
+  font-size: max(8rem);
+  color: ${props => props.isLight === true ? secondLightColor : secondColor};
+  white-space: nowrap;
+  transition: all .3s ease-out;
+
+  &:after {    
+    content: "";
+    display: block;
+    height: 14px;
+    top: 50%;
+    left: 0;
+    transform: translate(0, 0%);
+    position: absolute;
+    background: ${props => props.isLight === true ? thirdLightColor : thirdColor};
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after { 
+    width: 100%; 
+    right: 0;
+  }
+`
+
 export const EmSpace = styled.div `
   left: 100px;
   height: 6px;
@@ -58,45 +86,31 @@ export const Number = styled.span `
   color: ${props => props.isLight === true ? fourthLightColor : fourthColor};
   letter-spacing: .3rem;
 
-  &.oldchild0::before {
+  &::before {
     position: absolute;
-    content: "00";
     left: 3px;
     top: 1px;
     color: transparent;
     -webkit-text-stroke: 1px ${props => props.isLight === true ? secondLightColor : secondColor};
+  }
+
+  &.oldchild0::before {
+    content: "00";
   }
   &.oldchild1::before {
-    position: absolute;
     content: "01";
-    left: 3px;
-    top: 1px;
-    color: transparent;
-    -webkit-text-stroke: 1px ${props => props.isLight === true ? secondLightColor : secondColor};
   }
   &.oldchild2::before {
-    position: absolute;
     content: "02";
-    left: 3px;
-    top: 1px;
-    color: transparent;
-    -webkit-text-stroke: 1px ${props => props.isLight === true ? secondLightColor : secondColor};
   }
   &.oldchild3::before {
-    position: absolute;
     content: "03";
-    left: 3px;
-    top: 1px;
-    color: transparent;
-    -webkit-text-stroke: 1px ${props => props.isLight === true ? secondLightColor : secondColor};
   }
   &.oldchild5::before {
-    position: absolute;
     content: "05";
-    left: 3px;
-    top: 1px;
-    color: transparent;
-    -webkit-text-stroke: 1px ${props => props.isLight === true ? secondLightColor : secondColor};
+  }
+  &.oldchild6::before {
+    content: "06";
   }
 `
 

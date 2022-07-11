@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {primaryColor,primaryLightColor, secondColor, thirdColor} from '../Common';
+import {primaryColor , primaryLightColor, thirdColor, thirdLightColor} from '../Common';
 
 
 const Button = styled.button`
@@ -18,6 +18,10 @@ const Button = styled.button`
 const Moon = styled.svg`
   & path {
     fill: ${props => props.isLight === true ?  primaryColor : primaryLightColor };
+    transition: all .3s ease-in;
+  }
+  &:hover > path {
+    fill: ${props => props.isLight === true ? thirdLightColor : thirdColor };
   }
 `
 

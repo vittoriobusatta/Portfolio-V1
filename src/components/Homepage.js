@@ -19,7 +19,7 @@ const HomePageContainer = styled.main`
   transition: all .3s ease-in;
 
   @media (min-width: 1400px) {
-    width: calc(100% - 150px);
+    width: calc(100% - 120px);
   }
 
   @media (max-width: 850px) {
@@ -36,7 +36,7 @@ const landing = ({lightMode, setlightMode}) => {
   return (
     <HomePageContainer isLight={lightMode}>
       <DarkBtn setlightMode={setlightMode} lightMode={lightMode}/>
-      {/* <Landing setlightMode={setlightMode} lightMode={lightMode}/> */}
+      <Landing setlightMode={setlightMode} lightMode={lightMode}/>
       <Marquee setlightMode={setlightMode} lightMode={lightMode}/>
       <Education setlightMode={setlightMode} lightMode={lightMode}/>
       <Marquee2 setlightMode={setlightMode} lightMode={lightMode}/>

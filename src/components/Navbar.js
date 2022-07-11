@@ -16,10 +16,9 @@ const NavbarContainer = styled.section`
   z-index: 111;
   border-right: 2px solid ${props => props.isLight === true ? thirdLightColor : thirdColor};
   background-color: ${props => props.isLight === true ? primaryLightColor : primaryColor};
-  transition: all .3s ease-in;
-  transition: top 0.3s;
+  transition: all .3s ease-in, top 0.3s;
   @media (min-width: 1400px) {
-    min-width: 150px;
+    min-width: 120px;
   }
 
   @media (max-width: 850px) {
@@ -197,7 +196,7 @@ const TextRotate = styled.a`
   font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 483, 'XOPQ' 124, 'YOPQ' 91, 
   'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
   &:hover {
-    color: #95ADCF;
+    color: ${props => props.isLight === true ? thirdLightColor : thirdColor};
   }
   &:after {    
     bottom: 0;
