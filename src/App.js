@@ -128,8 +128,6 @@ function App() {
         
       </BrowserRouter>
 
-      {/* {openContact && <ContactPage setlightMode={setlightMode} lightMode={lightMode}/>} */}
-
     </div>
   );
 }

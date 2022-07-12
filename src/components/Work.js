@@ -6,10 +6,10 @@ import MutezaThumbnail from '../assets/img/muteza.webp'
 import OukhtyThumbnail from '../assets/img/oukhty.webp'
 import FolioThumbnail from '../assets/img/folio.webp'
 import FlowerThumbnail from '../assets/img/flower.webp'
-import EasyBankThumbnail from '../assets/img/esaybank.png'
-import CoventicThumbnail from '../assets/img/coventic.png'
-import NetflixThumbnail from '../assets/img/netflix.png'
-import BlogrThumbnail from '../assets/img/blogr.png'
+import EasyBankThumbnail from '../assets/img/esaybank.webp'
+import CoventicThumbnail from '../assets/img/coventic.webp'
+import NetflixThumbnail from '../assets/img/netflix.webp'
+import BlogrThumbnail from '../assets/img/blogr.webp'
 import { useEffect } from 'react';
 
 
@@ -91,7 +91,7 @@ const Image = styled.img`
   height: auto;
   width: 90%;
   transition: all 0.2s ease-in;
-  border-radius: 20px;
+  border-radius: 15px;
   opacity: ${props => props.isHover === true ? 1 : 0};
 `
 
