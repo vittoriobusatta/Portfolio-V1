@@ -23,31 +23,31 @@ function Marquee({lightMode, setlightMode}) {
 
           <MarqueeC isLight={lightMode}>
             <MarqueeText>
-                <WText isLight={lightMode}>Work</WText>
+                <WText isLight={lightMode}>Projects</WText>
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <YText isLight={lightMode}>Work</YText> 
+                <YText isLight={lightMode}>Projects</YText> 
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <WText isLight={lightMode}>Work</WText>
+                <WText isLight={lightMode}>Projects</WText>
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <YText isLight={lightMode}>Work</YText> 
+                <YText isLight={lightMode}>Projects</YText> 
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <WText isLight={lightMode}>Work</WText>
+                <WText isLight={lightMode}>Projects</WText>
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <YText isLight={lightMode}>Work</YText> 
+                <YText isLight={lightMode}>Projects</YText> 
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
             </MarqueeText>
             <MarqueeText>
-                <WText isLight={lightMode}>Work</WText>
+                <WText isLight={lightMode}>Projects</WText>
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <YText isLight={lightMode}>Work</YText> 
+                <YText isLight={lightMode}>Projects</YText> 
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <WText isLight={lightMode}>Work</WText>
+                <WText isLight={lightMode}>Projects</WText>
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <YText isLight={lightMode}>Work</YText> 
+                <YText isLight={lightMode}>Projects</YText> 
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <WText isLight={lightMode}>Work</WText>
+                <WText isLight={lightMode}>Projects</WText>
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
-                <YText isLight={lightMode}>Work</YText> 
+                <YText isLight={lightMode}>Projects</YText> 
                 <Idt isLight={lightMode}>&nbsp;-&nbsp;</Idt> 
             </MarqueeText>
         </MarqueeC>

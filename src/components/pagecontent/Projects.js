@@ -194,7 +194,7 @@ function Work({lightMode, setlightMode}) {
 
             <div style={{height: 'auto', width: 100 + "%", paddingTop: 3 + "rem"}}>
                 <div style={{height: 100 + "%", width: 100 + "%"}}>
-                    <Title isLight={lightMode}>Work</Title>
+                    <Title isLight={lightMode}>Projects</Title>
                 </div>
             </div>
 
@@ -208,7 +208,7 @@ function Work({lightMode, setlightMode}) {
 
                 <Content>
                     <ContentProject>
-                        <ContentProjectLink target="_blank" href='https://www.ab-distribution.re'>
+                        <ContentProjectLink isLight={lightMode} target="_blank" href='https://www.ab-distribution.re'>
                             <Vector isLight={lightMode} width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.54927 7.80501H0V8.5855H9.54927V9.75623L11.0727 8.19525L9.54927 6.63428V7.80501Z" fill="#FFEDCB"/>
                                 <path d="M20.9998 8C20.9998 12.4183 17.4954 16 13.1725 16C8.8496 16 5.34521 12.4183 5.34521 8C5.34521 3.58172 8.8496 0 13.1725 0C17.4954 0 20.9998 3.58172 20.9998 8ZM5.72896 8C5.72896 12.2017 9.06154 15.6078 13.1725 15.6078C17.2834 15.6078 20.616 12.2017 20.616 8C20.616 3.79834 17.2834 0.392213 13.1725 0.392213C9.06154 0.392213 5.72896 3.79834 5.72896 8Z" fill="#FFEDCB"/>
@@ -233,7 +233,7 @@ function Work({lightMode, setlightMode}) {
                 <Content>
                     <ContentProject>
                         <div style={{height: 'auto', width: 100 + "%", display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <ContentProjectLink target="_blank" href='https://tonii0.github.io/Muteza/'>
+                            <ContentProjectLink isLight={lightMode} target="_blank" href='https://tonii0.github.io/Muteza/'>
                                 <Vector isLight={lightMode} width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.54927 7.80501H0V8.5855H9.54927V9.75623L11.0727 8.19525L9.54927 6.63428V7.80501Z" fill="#FFEDCB"/>
                                     <path d="M20.9998 8C20.9998 12.4183 17.4954 16 13.1725 16C8.8496 16 5.34521 12.4183 5.34521 8C5.34521 3.58172 8.8496 0 13.1725 0C17.4954 0 20.9998 3.58172 20.9998 8ZM5.72896 8C5.72896 12.2017 9.06154 15.6078 13.1725 15.6078C17.2834 15.6078 20.616 12.2017 20.616 8C20.616 3.79834 17.2834 0.392213 13.1725 0.392213C9.06154 0.392213 5.72896 3.79834 5.72896 8Z" fill="#FFEDCB"/>
@@ -259,7 +259,7 @@ function Work({lightMode, setlightMode}) {
                 <Content>
                     <ContentProject>
                         <div style={{height: 'auto', width: 100 + "%", display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <ContentProjectLink target="_blank" href='https://www.ab-distribution.re'>
+                            <ContentProjectLink isLight={lightMode} target="_blank" href='https://www.ab-distribution.re'>
                                 <Vector isLight={lightMode} width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.54927 7.80501H0V8.5855H9.54927V9.75623L11.0727 8.19525L9.54927 6.63428V7.80501Z" fill="#FFEDCB"/>
                                     <path d="M20.9998 8C20.9998 12.4183 17.4954 16 13.1725 16C8.8496 16 5.34521 12.4183 5.34521 8C5.34521 3.58172 8.8496 0 13.1725 0C17.4954 0 20.9998 3.58172 20.9998 8ZM5.72896 8C5.72896 12.2017 9.06154 15.6078 13.1725 15.6078C17.2834 15.6078 20.616 12.2017 20.616 8C20.616 3.79834 17.2834 0.392213 13.1725 0.392213C9.06154 0.392213 5.72896 3.79834 5.72896 8Z" fill="#FFEDCB"/>
@@ -285,7 +285,7 @@ function Work({lightMode, setlightMode}) {
                 <Content>
                     <ContentProject>
                         <div style={{height: 'auto', width: 100 + "%", display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <ContentProjectLink target="_blank" href='https://www.tonibusatta.fr'>
+                            <ContentProjectLink isLight={lightMode} target="_blank" href='https://www.tonibusatta.fr'>
                                 <Vector isLight={lightMode} width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.54927 7.80501H0V8.5855H9.54927V9.75623L11.0727 8.19525L9.54927 6.63428V7.80501Z" fill="#FFEDCB"/>
                                     <path d="M20.9998 8C20.9998 12.4183 17.4954 16 13.1725 16C8.8496 16 5.34521 12.4183 5.34521 8C5.34521 3.58172 8.8496 0 13.1725 0C17.4954 0 20.9998 3.58172 20.9998 8ZM5.72896 8C5.72896 12.2017 9.06154 15.6078 13.1725 15.6078C17.2834 15.6078 20.616 12.2017 20.616 8C20.616 3.79834 17.2834 0.392213 13.1725 0.392213C9.06154 0.392213 5.72896 3.79834 5.72896 8Z" fill="#FFEDCB"/>
@@ -311,7 +311,7 @@ function Work({lightMode, setlightMode}) {
                 <Content>
                     <ContentProject>
                         <div style={{height: 'auto', width: 100 + "%", display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <ContentProjectLink target="_blank" href='https://flytzwoo.github.io/Aliyahmarinabfleurs/'>
+                            <ContentProjectLink isLight={lightMode} target="_blank" href='https://flytzwoo.github.io/Aliyahmarinabfleurs/'>
                                 <Vector isLight={lightMode} width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.54927 7.80501H0V8.5855H9.54927V9.75623L11.0727 8.19525L9.54927 6.63428V7.80501Z" fill="#FFEDCB"/>
                                     <path d="M20.9998 8C20.9998 12.4183 17.4954 16 13.1725 16C8.8496 16 5.34521 12.4183 5.34521 8C5.34521 3.58172 8.8496 0 13.1725 0C17.4954 0 20.9998 3.58172 20.9998 8ZM5.72896 8C5.72896 12.2017 9.06154 15.6078 13.1725 15.6078C17.2834 15.6078 20.616 12.2017 20.616 8C20.616 3.79834 17.2834 0.392213 13.1725 0.392213C9.06154 0.392213 5.72896 3.79834 5.72896 8Z" fill="#FFEDCB"/>

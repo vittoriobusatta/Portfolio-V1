@@ -6,8 +6,8 @@ import Navbar from './components/Navbar';
 import Menu from './components/Menu'
 import HomePage from './components/Homepage';
 import ContactPage from './components/ContactPage';
-import Projects from './components/Projects';
-import ProjectsBtn from './components/ProjectsBtn';
+import Work from './components/Work';
+import WorkBtn from './components/WorkBtn';
 import {secondColor, primaryLightColor, primaryColor, secondLightColor, thirdLightColor, thirdColor} from './components/Common';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -41,16 +41,20 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: none;
   }
   ::selection {
-      background: ${props => props.isLight === true ? "#AAAE8E" : "#305275"};
-      text-shadow: none;
+    background: ${props => props.isLight === true ? "#AAAE8E" : "#305275"};
+    text-shadow: none;
   }
   ::-webkit-scrollbar{
-      width: 10px;
-      border-left: 2px solid ${props => props.isLight === true ? thirdLightColor : thirdColor};
+    width: 10px;
+    border-left: 2px solid ${props => props.isLight === true ? thirdLightColor : thirdColor};
   }
   ::-webkit-scrollbar-thumb{
-      background-color: ${props => props.isLight === true ? secondLightColor : secondColor};
-      border-radius: 15px;
+    background-color: ${props => props.isLight === true ? secondLightColor : secondColor};
+    transition: all .3s ease-in;
+    border-radius: 15px;
+    &:hover {
+      background-color: ${props => props.isLight === true ? thirdLightColor : thirdColor};
+    }
   }
 `
 
@@ -117,10 +121,10 @@ function App() {
         <Routes>
           <Route path="/" element={ <HomePage setlightMode={setlightMode} lightMode={lightMode}/>} />
           <Route path="contact" element={<ContactPage setlightMode={setlightMode} lightMode={lightMode}/>} />
-          <Route path="projects" element={<Projects setlightMode={setlightMode} lightMode={lightMode}/>} />
+          <Route path="Work" element={<Work setlightMode={setlightMode} lightMode={lightMode}/>} />
         </Routes>
       
-      {<ProjectsBtn setlightMode={setlightMode} lightMode={lightMode}/>}
+      {<WorkBtn setlightMode={setlightMode} lightMode={lightMode}/>}
         
       </BrowserRouter>
 

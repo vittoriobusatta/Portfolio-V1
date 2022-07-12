@@ -6,7 +6,7 @@ import Marquee3 from './pagecontent/Marquee3';
 import Marquee4 from './pagecontent/Marquee4';
 import Education from './pagecontent/Education';
 import Landing from './pagecontent/Landing';
-import Work from './pagecontent/Work';
+import Work from './pagecontent/Projects';
 import About from './pagecontent/About';
 import DarkBtn from './pagecontent/Darkbtn';
 import {primaryLightColor, primaryColor} from './Common';

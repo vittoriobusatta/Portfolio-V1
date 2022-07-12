@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {secondColor, thirdColor, LinksA, thirdLightColor, secondLightColor} from './Common';
 
 
-const ProjectsContainer = styled.header`
+const WorkContainer = styled.header`
   position: fixed;
   height: auto;
   width: auto;
@@ -48,7 +48,7 @@ const WorkA = styled(LinksA)`
 
 
 
-const WorkBtn = styled.button`
+const Button = styled.button`
   position: relative;
   height: 40px;
   width: 40px;
@@ -62,15 +62,15 @@ const WorkBtn = styled.button`
 `
 
 
-function ProjectsBtn ({lightMode}) {
+function WorkBtn ({lightMode}) {
   return (
-    <ProjectsContainer isLight={lightMode}>
-        <Link to="projects">
-          <WorkBtn isLight={lightMode}/>
+    <WorkContainer isLight={lightMode}>
+        <Link to="Work">
+          <Button isLight={lightMode}/>
           <WorkA href='' isLight={lightMode}>Work</WorkA>
         </Link>
-    </ProjectsContainer>
+    </WorkContainer>
   )
 }
 
-export default ProjectsBtn
+export default WorkBtn

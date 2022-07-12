@@ -15,8 +15,10 @@ const MenuContainer = styled.section`
     width: calc(100% - 120px);
   }
   @media (max-width: 850px){
+    position: fixed;
     width: 100%;
-    margin-top: 100px;
+    height: calc(100vh - 100px);
+    bottom: 0;
   }
   @media (max-width: 450px){
     margin-top: 80px;
@@ -88,11 +90,31 @@ const PaddingCopy = styled.div`
   padding: 0rem 5rem;
 `
 
+const TopContainer = styled.div`
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 850px){
+    height: 95%;
+  }
+`
+const BottomContainer = styled.div`
+  height: 10%;
+  width: 100%;
+
+  @media (max-width: 850px){
+    height: 5%;
+  }
+`
+
+
 function Menu({openMenu, setOpenMenu, lightMode, setlightMode}) {
   return (
     <MenuContainer isLight={lightMode} isActive={openMenu}>
 
-      <div style={{height: 90 + "%", width: 100 + "%", display: 'flex', justifyContent: 'flex-end'}}>
+      <TopContainer>
 
         <ContainerTitle>
 
@@ -144,14 +166,14 @@ function Menu({openMenu, setOpenMenu, lightMode, setlightMode}) {
           </Navigation>
         </Content> */}
 
-      </div>
+      </TopContainer>
 
-      <div style={{height: 10 + "%", width: 100 + "%",}}>
+      <BottomContainer>
         <PaddingCopy>
           <Copyright>Designed and made by Vittorio</Copyright>
           <Copyright>2022 - All Rights Reserverd © </Copyright>
         </PaddingCopy>
-      </div>
+      </BottomContainer>
 
     </MenuContainer>
   )

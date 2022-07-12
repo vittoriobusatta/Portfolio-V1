@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Img from '../../assets/img/PP.webp'
-import {secondColor, thirdColor, morgenWalsh, fourthColor, EmSpace, OldchildContent, Title, Number, ContainerTitle, roboto, fourthLightColor} from '../Common';
+import {secondColor, secondLightColor, morgenWalsh, fourthColor, EmSpace, OldchildContent, Title, Number, ContainerTitle, roboto, fourthLightColor} from '../Common';
 
 
 const AboutContainer = styled.section`
@@ -74,7 +74,7 @@ const PContent = styled.p`
         top: -1rem;
         font-family: ${morgenWalsh};
         font-size: 7rem;
-        color: ${secondColor};
+        color: ${props => props.isLight === true ? secondLightColor : secondColor};
     }
     &::before {
         position: absolute;
@@ -83,7 +83,7 @@ const PContent = styled.p`
         bottom: -6rem;
         font-family: ${morgenWalsh};
         font-size: 7rem;
-        color: ${secondColor};
+        color: ${props => props.isLight === true ? secondLightColor : secondColor};
     }
 `
 const NContent = styled.p`

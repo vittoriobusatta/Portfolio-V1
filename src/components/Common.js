@@ -27,7 +27,7 @@ export const LinksA = styled.a`
   'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
 `
 
-export const ProjectsLinks = styled.a`
+export const WorkLinks = styled.a`
   position: relative;
   font-family: ${morgenWalsh};
   font-style: normal;
@@ -37,6 +37,19 @@ export const ProjectsLinks = styled.a`
   white-space: nowrap;
   transition: all .3s ease-out;
 
+  &::before {
+    position: absolute;
+    content: '';
+    left: -20px;
+    top: 15px;
+    font-size: max(3rem);
+    font-family: ${ancient};
+  }
+
+  &:hover {
+    color: ${props => props.isLight === true ? thirdLightColor : thirdColor};
+  }
+
   &:after {    
     content: "";
     display: block;
@@ -45,7 +58,7 @@ export const ProjectsLinks = styled.a`
     left: 0;
     transform: translate(0, 0%);
     position: absolute;
-    background: ${props => props.isLight === true ? thirdLightColor : thirdColor};
+    background: ${props => props.isLight === true ? secondLightColor : secondColor};
     transition: width 0.3s ease 0s, right 0.3s ease 0s;
     width: 0;
   }
@@ -60,9 +73,11 @@ export const EmSpace = styled.div `
   height: 6px;
   width: 10%;
   min-width: 30px;
+  max-width: 60px;
   background: ${props => props.isLight === true ? secondLightColor : secondColor};
   margin-right: 5rem;
   margin-bottom: 1.5rem;
+  border-radius: 5%;
 `
 
 export const OldchildContent = styled.div `
