@@ -51,18 +51,18 @@ const ContainerRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   @media (max-width: 850px) {
     display: none;
   }
 `
 
 const Content = styled.div`
-  height: auto;
-  width: auto;
+  position: relative;
+  height: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 `
 
 const Ul = styled.ul`
@@ -74,7 +74,6 @@ const Ul = styled.ul`
 
   ::-webkit-scrollbar {
     cursor: pointer;
-    /* border: 2px solid ${props => props.isLight === true ? thirdLightColor : thirdColor}; */
     border: none;
   }
 `
@@ -88,9 +87,12 @@ const Li = styled.li`
 
 
 const Image = styled.img`
+  position: absolute;
   height: auto;
   width: 90%;
   transition: all 0.2s ease-in;
+  border-radius: 20px;
+  opacity: ${props => props.isHover === true ? 1 : 0};
 `
 
 
@@ -136,6 +138,7 @@ function Work(lightMode) {
   };
 
 
+
   return (
     <ContactContainer>
 
@@ -143,7 +146,7 @@ function Work(lightMode) {
 
         <Ul>
           
-          <Li onMouseEnter={onHover} onMouseLeave={onHover}>
+        <Li onMouseEnter={onHover} onMouseLeave={onHover}>
             <WorkLinks href='#' >
               Oukhty Shop
             </WorkLinks>
@@ -189,6 +192,7 @@ function Work(lightMode) {
               Blogr
             </WorkLinks>
           </Li>
+ 
           
         </Ul>
 
@@ -199,33 +203,33 @@ function Work(lightMode) {
 
         <Content>
 
-          {hover && <Image 
+          <Image isHover={hover}
             src={OukhtyThumbnail}
-          />}
-          {hover2 && <Image 
+          />
+          <Image isHover={hover2}
             src={AbThumbnail}
-          />}
-          {hover3 && <Image 
+          />
+          <Image isHover={hover3}
             src={FolioThumbnail}
-          />}
-          {hover4 && <Image 
+          />
+          <Image isHover={hover4}
             src={MutezaThumbnail}
-          />}
-          {hover5 && <Image 
+          />
+          <Image isHover={hover5}
             src={FlowerThumbnail}
-          />}
-          {hover6 && <Image 
+          />
+          <Image isHover={hover6}
             src={EasyBankThumbnail}
-          />}
-          {hover7 && <Image 
+          />
+          <Image isHover={hover7}
             src={CoventicThumbnail}
-          />}
-          {hover8 && <Image 
+          />
+          <Image isHover={hover8}
             src={NetflixThumbnail}
-          />}
-          {hover9 && <Image 
+          />
+          <Image isHover={hover9}
             src={BlogrThumbnail}
-          />}
+          />
 
         </Content>
 
