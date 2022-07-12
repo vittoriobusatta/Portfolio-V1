@@ -63,31 +63,32 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
 
-  const [openMenu, setOpenMenu] = useState(false)
   const [lightMode, setlightMode] = useState(false)
   const [openContact, setOpenContact] = useState(false)
   const [openHome, setOpenHome] = useState(true)
 
-  
+  const [openMenu, setOpenMenu] = useState(false)
   const [scrollTop, setScrollTop] = useState(0);
-
  
   const checkIsMobile = () => {
     return window.matchMedia("(max-width: 850px)").matches
   }
 
-  /*  Si le menu est ouvert, ne pas déclancher l'animation du scroll,
-    sinon 
-  */
-
   useEffect(() => {
     function onScroll() {
-      let navBar = document.getElementById("navbar")
-      if (!checkIsMobile())  {
+    let navBar = document.getElementById("navbar")
+
+      if (!checkIsMobile()) {
+        navBar.style.top = "0";
+        return
+      }
+
+      if (openMenu) {
         navBar.style.top = "0";
         return 
       }
-      let currentPosition = window.pageYOffset; // or use document.documentElement.scrollTop;
+
+      let currentPosition = window.pageYOffset;
       if (currentPosition > scrollTop) {
         navBar.style.top = "-100px";
       } else {
@@ -98,7 +99,7 @@ function App() {
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+  }, [scrollTop, openMenu]);
 
 
 
