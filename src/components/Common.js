@@ -53,7 +53,7 @@ export const WorkLinks = styled.a`
   &:after {    
     content: "";
     display: block;
-    height: 14px;
+    height: 1.4rem;
     top: 50%;
     left: 0;
     transform: translate(0, 0%);
@@ -65,6 +65,10 @@ export const WorkLinks = styled.a`
   &:hover:after { 
     width: 100%; 
     right: 0;
+  }
+
+  @media (max-width: 1100px) {
+      font-size: 6.5rem;
   }
 `
 

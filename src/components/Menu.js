@@ -15,13 +15,12 @@ const MenuContainer = styled.section`
     width: calc(100% - 120px);
   }
   @media (max-width: 850px){
-    position: fixed;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100% - 100px);
     bottom: 0;
   }
   @media (max-width: 450px){
-    margin-top: 80px;
+    height: calc(100% - 80px);
   }
 `
 

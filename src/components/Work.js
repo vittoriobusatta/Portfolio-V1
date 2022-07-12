@@ -24,6 +24,7 @@ const ContactContainer = styled.section`
   }
 
   @media (max-width: 850px) {
+    display: none;
     position: absolute;
     width: 100%;
     height: calc(100vh - 100px);
@@ -70,6 +71,10 @@ const Ul = styled.ul`
   overflow-y: scroll;
   max-height: 750px;
   padding-right: 5rem;
+
+  @media (max-width: 1100px) {
+   max-height: 650px;
+  }
 
   ::-webkit-scrollbar {
     cursor: pointer;
