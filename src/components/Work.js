@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import styled from 'styled-components';
-import { primaryColor, primaryLightColor, thirdColor, thirdLightColor, WorkLinks} from './Common';
+import { primaryColor, primaryLightColor, WorkLinks} from './Common';
 import AbThumbnail from '../assets/img/ab-distribution.webp'
 import MutezaThumbnail from '../assets/img/muteza.webp'
 import OukhtyThumbnail from '../assets/img/oukhty.webp'
@@ -10,7 +10,6 @@ import EasyBankThumbnail from '../assets/img/esaybank.webp'
 import CoventicThumbnail from '../assets/img/coventic.webp'
 import NetflixThumbnail from '../assets/img/netflix.webp'
 import BlogrThumbnail from '../assets/img/blogr.webp'
-import { useEffect } from 'react';
 
 
 const ContactContainer = styled.section`
@@ -69,7 +68,7 @@ const Ul = styled.ul`
   height: auto;
   width: auto;
   overflow-y: scroll;
-  max-height: 800px;
+  max-height: 750px;
   padding-right: 5rem;
 
   ::-webkit-scrollbar {
