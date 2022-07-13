@@ -265,8 +265,6 @@ const Navbar = ({openMenu, setOpenMenu, lightMode, openContact, setOpenContact, 
     setOpenContact(false)
   }
 
-  // console.log({openMenu});
-
 
   return (
     <NavbarContainer id='navbar' isLight={lightMode}>

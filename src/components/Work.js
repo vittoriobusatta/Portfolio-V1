@@ -12,12 +12,12 @@ import NetflixThumbnail from '../assets/img/netflix.webp'
 import BlogrThumbnail from '../assets/img/blogr.webp'
 
 
-const ContactContainer = styled.section`
+const Container = styled.section`
   height: 100vh;
   width: calc(100% - 100px);
   background-color: ${props => props.isLight === true ? primaryLightColor : primaryColor};
   display: flex;
-  overflow: hidden;
+  transition: all .2s ease-in;
 
   @media (min-width: 1400px) {
     width: calc(100% - 120px);
@@ -101,7 +101,8 @@ const Image = styled.img`
 
 
 
-function Work(lightMode) {
+function Work(lightMode, openWork) {
+
 
   const [hover, setHover] = useState(false);
   const [hover2, setHover2] = useState(false);
@@ -142,9 +143,8 @@ function Work(lightMode) {
   };
 
 
-
   return (
-    <ContactContainer>
+    <Container isActive={openWork}>
 
       <ContainerLeft>
 
@@ -240,7 +240,7 @@ function Work(lightMode) {
       </ContainerRight>
 
               
-    </ContactContainer>
+    </Container>
   )
 }
 
