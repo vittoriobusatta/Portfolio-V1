@@ -107,7 +107,7 @@ function App() {
   return (
     <div className="App" style={{display: "flex",justifyContent: "flex-end"}}>
       <GlobalStyle isLight={lightMode} />
-      <Menu setOpenMenu={setOpenMenu} openMenu={openMenu} setOpenHome={setOpenHome} openHome={openHome}/>
+      {/* <Menu setOpenMenu={setOpenMenu} openMenu={openMenu} setOpenHome={setOpenHome} openHome={openHome}/> */}
       <BrowserRouter>
         <Navbar
           setOpenMenu={setOpenMenu} 
