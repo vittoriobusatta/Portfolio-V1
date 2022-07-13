@@ -74,9 +74,9 @@ export const WorkLinks = styled.a`
 
 export const EmSpace = styled.div `
   left: 100px;
-  height: 6px;
+  height: max(0.6rem, 4px);
   width: 10%;
-  min-width: 30px;
+  min-width: 20px;
   max-width: 60px;
   background: ${props => props.isLight === true ? secondLightColor : secondColor};
   margin-right: 5rem;
@@ -111,6 +111,11 @@ export const Number = styled.span `
     top: 1px;
     color: transparent;
     -webkit-text-stroke: 1px ${props => props.isLight === true ? secondLightColor : secondColor};
+
+    @media (max-width: 400px) {
+      -webkit-text-stroke: 0.5px ${props => props.isLight === true ? secondLightColor : secondColor};
+      left: 1px;
+    }
   }
 
   &.oldchild0::before {

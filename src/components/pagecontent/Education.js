@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { secondColor, morgenWalsh, thirdColor, roboto, fourthColor, EmSpace, OldchildContent, Title, Number, ContainerTitle, fourthLightColor, thirdLightColor, secondLightColor} from '../Common';
-import CuriculomSVG from "../../icons/circle.svg";
+import { secondColor, morgenWalsh, thirdColor, roboto, fourthColor, EmSpace, OldchildContent, Title, Number, fourthLightColor, thirdLightColor, secondLightColor} from '../Common';
 
 const EducationContainer = styled.section`
     position: relative;
@@ -34,9 +33,6 @@ const EducationContainerRight = styled.div`
         width: 100%;
         height: 70%;
     }
-    @media (max-width: 850px) {
-        height: 75%;
-    }
 `
 const ScolarityContainer = styled.div`
     height: 100%;
@@ -51,7 +47,7 @@ const ScolarityContent = styled.div`
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     @media (max-width: 850px) {
-        grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr 0.05fr 0.5fr repeat(6, 1fr) 0.5fr;
+        grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr 0.06fr 0.5fr repeat(6, 1fr) 0.5fr;
     }
     @media (max-width: 400px) {
         grid-template-columns: 0.2fr 2fr 0.5fr 0.05fr 0.8fr 2fr 0.2fr;
@@ -186,12 +182,10 @@ const Circle = styled.span`
         top: 0;
     }
 ` 
-
 const Layout = styled.span`
     height: auto;
     width: auto;
 ` 
-
 const InstitutionName = styled.h3`
     color: ${props => props.isLight === true ? fourthLightColor : fourthColor};
     font-size: max(3rem, 15px);
@@ -220,7 +214,6 @@ const Paragraph = styled.p`
         font-size: 9px;
     }
 ` 
-
 const CompilationYear = styled.span`
     font-size: max(1.4rem,8px);
     font-family: ${morgenWalsh};
@@ -229,6 +222,94 @@ const CompilationYear = styled.span`
     letter-spacing: .2rem;
     white-space: nowrap;
 ` 
+const WrapperTitle = styled.div `
+    height: 50%;
+    width: 100%;
+    position: relative;
+    @media (max-width: 1300px) {
+        width: 50%;
+        height: 100%;
+    }
+    @media (max-width: 850px) {
+        width: 60%;
+    }
+`
+const Wrap = styled.div `
+    height: auto;
+    width: 100%;
+`
+const Auto = styled.span `
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+`
+const CuriculumContainer = styled.div `
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @media (max-width: 1300px) {
+        width: 50%;
+        height: 100%;
+    }
+    @media (max-width: 850px) {
+        width: 40%;
+    }
+`
+
+const CuriculumContent = styled.div `
+    position: relative;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    @media (max-width: 1300px) {
+        height: auto;
+        width: auto;
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+    }
+ 
+    @media (max-width: 400px) {
+        
+    }
+`
+const CuriculumText = styled.a `
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: ${props => props.isLight === true ? secondLightColor : secondColor};
+    font-size: max(2.4rem, 10px);
+    font-family: ${morgenWalsh};
+    text-align: center;
+    transition: all .3s ease-out;
+`
+
+const Svg = styled.svg `
+    width: 26rem;
+    height: 26rem;
+    & circle {
+        stroke: ${props => props.isLight === true ? thirdLightColor : thirdColor};
+        transition: all .3s ease-out;
+    }
+`
+const Span = styled.a `
+    width: auto;
+    height: auto;
+    position: relative;
+    &:hover > svg > circle {
+        stroke: ${props => props.isLight === true ? secondLightColor : secondColor};
+    }
+    &:hover > a {
+        color: ${props => props.isLight === true ? thirdLightColor : thirdColor};
+    }
+`
+
 
 function education({lightMode, setlightMode}) {
   return (
@@ -236,25 +317,39 @@ function education({lightMode, setlightMode}) {
 
         <EducationContainerLeft>
 
-            <ContainerTitle>
-
-                <div style={{height: 'auto', width: 100 + "%"}}>
-                    <div style={{height: 100 + "%", width: 100 + "%"}}>
+            <WrapperTitle>
+                <Auto>
+                    <Wrap>
                         <OldchildContent>
                             <EmSpace isLight={lightMode}></EmSpace>
                             <Number isLight={lightMode} className="oldchild1">01</Number>
                         </OldchildContent>
-                        
-                    </div>
-                </div>
+                            
+                    </Wrap>
 
-                <div style={{height: 'auto', width: 100 + "%", paddingTop: 3 + "rem"}}>
-                    <div style={{height: 100 + "%", width: 100 + "%"}}>
+                    <Wrap style={{paddingTop: 3 + "rem"}}>
                         <Title isLight={lightMode}>Education</Title>
-                    </div>
-                </div>
+                    </Wrap>
+                </Auto>
 
-            </ContainerTitle>
+            </WrapperTitle>
+
+
+                
+
+
+            <CuriculumContainer>
+                <CuriculumContent>
+                    <Span href='#' download="Curiculum Vitae Busatta.pdf">
+                        <Svg width="260" height="260" viewBox="0 0 340 348" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="176" cy="164" r="162.5" stroke="#95ADCF" stroke-width="3"/>
+                            <circle cx="164" cy="184" r="162.5" stroke="#95ADCF" stroke-width="3"/>
+                        </Svg>
+                        <CuriculumText isLight={lightMode}>DOWNLOAD CV</CuriculumText>
+                    </Span>
+                    
+                </CuriculumContent>
+            </CuriculumContainer>
 
         </EducationContainerLeft>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import WorkSVG from "../../icons/fistcircle.svg";
 import { ReactComponent as ArrowImg } from '../../icons/arrow.svg';
-import {secondColor, thirdColor, morgenWalsh, LinksA, roboto, fourthColor, fourthLightColor, secondLightColor} from '../Common';
+import {secondColor, thirdColor, morgenWalsh, roboto, fourthColor, fourthLightColor, secondLightColor} from '../Common';
 
 
 const LandingContainer = styled.section`
@@ -184,7 +184,7 @@ const landing = ({lightMode, setlightMode}) => {
 
         <ColumnTwo>
             <Column2Content>
-                <a href="">View Work</a>
+                <a>View Work</a>
                 <svg viewBox="0 0 74 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M58.96 0L57.3763 1.58368L69.2326 13.44H0V15.68H69.2326L57.3741 27.5408L58.9578 29.1245L73.52 14.56L58.96 0Z" fill="#95ADCF"/></svg>
             </Column2Content>
         </ColumnTwo>
