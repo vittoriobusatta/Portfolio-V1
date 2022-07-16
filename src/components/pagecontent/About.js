@@ -150,7 +150,7 @@ function About({lightMode, setlightMode}) {
                 <PContent isLight={lightMode}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sollicitudin, odio ac lacinia consequat, urna ipsum dapibus felis, 
                 at iaculis nibh ligula ut ligula. Praesent dignissim purus id metus consectetur.
-                Don’t hesitate to <span><a href='#'>contact me.</a></span>
+                Don’t hesitate to <span>contact me.</span>
                 </PContent>
             </Paragraph>
 
