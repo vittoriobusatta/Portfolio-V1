@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: ${props => props.isLight === true ? primaryLightColor : primaryColor};
+    font-size: 1.4em;
   }
 
   ::-moz-selection {
@@ -74,6 +75,7 @@ function App() {
     return window.matchMedia("(max-width: 850px)").matches
   }
 
+
   useEffect(() => {
     function onScroll() {
     let navBar = document.getElementById("navbar")
@@ -85,7 +87,7 @@ function App() {
 
       if (openMenu) {
         navBar.style.top = "0";
-        // return setOpenMenu(false)
+        return setOpenMenu(false)
         return 
       }
 

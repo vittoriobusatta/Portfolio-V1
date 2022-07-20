@@ -23,6 +23,9 @@ const MenuContainer = styled.section`
   @media (max-width: 450px){
     height: calc(100vh - 80px);
   }
+  @media (max-width: 300px){
+    height: calc(100vh - 70px);
+  }
 `
 
 /* const Content = styled.div`
