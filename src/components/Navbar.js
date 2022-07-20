@@ -31,6 +31,9 @@ const NavbarContainer = styled.section`
   @media (max-width: 450px) {
     height: 80px;
   }
+  @media (max-width: 450px) {
+    height: 70px;
+  }
 `
 
 const NavBarWrap = styled.div`

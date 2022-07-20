@@ -4,6 +4,7 @@ import {primaryColor, secondColor, morgenWalsh, primaryLightColor, Number, EmSpa
 
 const MenuContainer = styled.section`
   height: 100%;
+  height: -webkit-fill-available;
   width: calc(100% - 100px);
   position: fixed;
   right: 0;
@@ -16,11 +17,14 @@ const MenuContainer = styled.section`
   }
   @media (max-width: 850px){
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100vh - 100px);
     bottom: 0;
   }
   @media (max-width: 450px){
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
+  }
+  @media (max-width: 300px){
+    height: calc(100vh - 70px);
   }
 `
 

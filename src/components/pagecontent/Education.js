@@ -273,10 +273,6 @@ const CuriculumContent = styled.div `
         top: 5rem;
         right: 5rem;
     }
- 
-    @media (max-width: 400px) {
-        
-    }
 `
 const CuriculumText = styled.a `
     position: absolute;
@@ -311,6 +307,7 @@ const Span = styled.a `
 `
 
 
+
 function education({lightMode, setlightMode}) {
   return (
     <EducationContainer>
@@ -340,8 +337,8 @@ function education({lightMode, setlightMode}) {
 
             <CuriculumContainer>
                 <CuriculumContent>
-                    <Span href='#' download="Curiculum Vitae Busatta.pdf">
-                        <Svg width="260" height="260" viewBox="0 0 340 348" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <Span isLight={lightMode} href='#' download="Curiculum Vitae Busatta.pdf">
+                        <Svg isLight={lightMode} width="260" height="260" viewBox="0 0 340 348" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="176" cy="164" r="162.5" stroke="#95ADCF" stroke-width="3"/>
                             <circle cx="164" cy="184" r="162.5" stroke="#95ADCF" stroke-width="3"/>
                         </Svg>
