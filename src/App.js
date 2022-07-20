@@ -88,7 +88,6 @@ function App() {
       if (openMenu) {
         navBar.style.top = "0";
         return setOpenMenu(false)
-        return 
       }
 
       let currentPosition = window.pageYOffset;
