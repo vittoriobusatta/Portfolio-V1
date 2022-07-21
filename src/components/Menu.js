@@ -1,6 +1,16 @@
-import React from 'react'
-import styled from 'styled-components';
-import {primaryColor, secondColor, morgenWalsh, primaryLightColor, Number, EmSpace, OldchildContent, Title, ContainerTitle} from './Common';
+import React from "react";
+import styled from "styled-components";
+import {
+  primaryColor,
+  secondColor,
+  morgenWalsh,
+  primaryLightColor,
+  Number,
+  EmSpace,
+  OldchildContent,
+  Title,
+  ContainerTitle,
+} from "./Common";
 
 const MenuContainer = styled.section`
   height: 100%;
@@ -8,25 +18,26 @@ const MenuContainer = styled.section`
   width: calc(100% - 100px);
   position: fixed;
   right: 0;
-  background: ${props => props.isLight === true ? primaryLightColor : primaryColor};
-  opacity: ${props => props.isActive === true ? 1 : 0};
-  z-index: ${props => props.isActive === true ? 1 : -1};
-  transition: all .2s ease-in;
+  background: ${(props) =>
+    props.isLight === true ? primaryLightColor : primaryColor};
+  opacity: ${(props) => (props.isActive === true ? 1 : 0)};
+  z-index: ${(props) => (props.isActive === true ? 1 : -1)};
+  transition: all 0.2s ease-in;
   @media (min-width: 1400px) {
     width: calc(100% - 120px);
   }
-  @media (max-width: 850px){
+  @media (max-width: 850px) {
     width: 100%;
     height: calc(100vh - 100px);
     bottom: 0;
   }
-  @media (max-width: 450px){
+  @media (max-width: 450px) {
     height: calc(100vh - 80px);
   }
-  @media (max-width: 300px){
+  @media (max-width: 300px) {
     height: calc(100vh - 70px);
   }
-`
+`;
 
 /* const Content = styled.div`
   height: 100%;
@@ -81,7 +92,7 @@ const Copyright = styled.p`
   color: ${secondColor};
   font-size: max(1.4rem, 10px);
   font-family: ${morgenWalsh};
-`
+`;
 const PaddingCopy = styled.div`
   height: 100%;
   width: 100%;
@@ -91,7 +102,7 @@ const PaddingCopy = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0rem 5rem;
-`
+`;
 
 const TopContainer = styled.div`
   height: 90%;
@@ -99,44 +110,40 @@ const TopContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: 850px){
+  @media (max-width: 850px) {
     height: 95%;
   }
-`
+`;
 const BottomContainer = styled.div`
   height: 10%;
   width: 100%;
 
-  @media (max-width: 850px){
+  @media (max-width: 850px) {
     height: 5%;
   }
-`
+`;
 
-
-function Menu({openMenu, setOpenMenu, lightMode, setlightMode}) {
+function Menu({ openMenu, setOpenMenu, lightMode, setlightMode }) {
   return (
     <MenuContainer isLight={lightMode} isActive={openMenu}>
-
       <TopContainer>
-
         <ContainerTitle>
-
-          <div style={{height: 'auto', width: 100 + "%"}}>
-              <div style={{height: 100 + "%", width: 100 + "%"}}>
-                  <OldchildContent>
-                      <EmSpace></EmSpace>
-                      <Number className="oldchild0">00</Number>
-                  </OldchildContent>
-                  
-              </div>
+          <div style={{ height: "auto", width: 100 + "%" }}>
+            <div style={{ height: 100 + "%", width: 100 + "%" }}>
+              <OldchildContent>
+                <EmSpace></EmSpace>
+                <Number className="oldchild0">00</Number>
+              </OldchildContent>
+            </div>
           </div>
 
-          <div style={{height: 'auto', width: 100 + "%", paddingTop: 3 + "rem"}}>
-              <div style={{height: 100 + "%", width: 100 + "%"}}>
-                  <Title>Menu</Title>
-              </div>
+          <div
+            style={{ height: "auto", width: 100 + "%", paddingTop: 3 + "rem" }}
+          >
+            <div style={{ height: 100 + "%", width: 100 + "%" }}>
+              <Title>Menu</Title>
+            </div>
           </div>
-
         </ContainerTitle>
 
         {/* <Content>
@@ -168,7 +175,6 @@ function Menu({openMenu, setOpenMenu, lightMode, setlightMode}) {
 
           </Navigation>
         </Content> */}
-
       </TopContainer>
 
       <BottomContainer>
@@ -177,9 +183,8 @@ function Menu({openMenu, setOpenMenu, lightMode, setlightMode}) {
           <Copyright>2022 - All Rights Reserverd © </Copyright>
         </PaddingCopy>
       </BottomContainer>
-
     </MenuContainer>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

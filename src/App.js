@@ -1,15 +1,22 @@
-import './font.css';
-import './reset.css';
-import { createGlobalStyle } from 'styled-components';
+import "./font.css";
+import "./reset.css";
+import { createGlobalStyle } from "styled-components";
 import { useState, useEffect } from "react";
-import Navbar from './components/Navbar';
-import Menu from './components/Menu'
-import HomePage from './components/Homepage';
-import ContactPage from './components/ContactPage';
-import Work from './components/Work';
-import WorkBtn from './components/WorkBtn';
-import {secondColor, primaryLightColor, primaryColor, secondLightColor, thirdLightColor, thirdColor} from './components/Common';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import Menu from "./components/Menu";
+import HomePage from "./components/Homepage";
+import ContactPage from "./components/ContactPage";
+import Work from "./components/Work";
+import WorkBtn from "./components/WorkBtn";
+import {
+  secondColor,
+  primaryLightColor,
+  primaryColor,
+  secondLightColor,
+  thirdLightColor,
+  thirdColor,
+} from "./components/Common";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -33,61 +40,60 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.isLight === true ? primaryLightColor : primaryColor};
+    background-color: ${(props) =>
+      props.isLight === true ? primaryLightColor : primaryColor};
     font-size: 1.4em;
   }
 
   ::-moz-selection {
-    background: ${props => props.isLight === true ? "#AAAE8E" : "#305275"};
+    background: ${(props) => (props.isLight === true ? "#AAAE8E" : "#305275")};
     text-shadow: none;
   }
   ::selection {
-    background: ${props => props.isLight === true ? "#AAAE8E" : "#305275"};
+    background: ${(props) => (props.isLight === true ? "#AAAE8E" : "#305275")};
     text-shadow: none;
   }
   ::-webkit-scrollbar{
     width: 10px;
-    border-left: 2px solid ${props => props.isLight === true ? thirdLightColor : thirdColor};
+    border-left: 2px solid ${(props) =>
+      props.isLight === true ? thirdLightColor : thirdColor};
   }
   ::-webkit-scrollbar-thumb{
-    background-color: ${props => props.isLight === true ? secondLightColor : secondColor};
+    background-color: ${(props) =>
+      props.isLight === true ? secondLightColor : secondColor};
     transition: all .3s ease-in;
     border-radius: 15px;
     &:hover {
-      background-color: ${props => props.isLight === true ? thirdLightColor : thirdColor};
+      background-color: ${(props) =>
+        props.isLight === true ? thirdLightColor : thirdColor};
     }
   }
-`
-
-
-
+`;
 
 function App() {
+  const [lightMode, setlightMode] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
+  const [openHome, setOpenHome] = useState(true);
 
-  const [lightMode, setlightMode] = useState(false)
-  const [openContact, setOpenContact] = useState(false)
-  const [openHome, setOpenHome] = useState(true)
-
-  const [openMenu, setOpenMenu] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
- 
-  const checkIsMobile = () => {
-    return window.matchMedia("(max-width: 850px)").matches
-  }
 
+  const checkIsMobile = () => {
+    return window.matchMedia("(max-width: 850px)").matches;
+  };
 
   useEffect(() => {
     function onScroll() {
-    let navBar = document.getElementById("navbar")
+      let navBar = document.getElementById("navbar");
 
       if (!checkIsMobile()) {
         navBar.style.top = "0";
-        return
+        return;
       }
 
       if (openMenu) {
         navBar.style.top = "0";
-        return setOpenMenu(false)
+        return setOpenMenu(false);
       }
 
       let currentPosition = window.pageYOffset;
@@ -103,34 +109,50 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop, openMenu]);
 
-
-
-
   return (
-    <div className="App" style={{display: "flex",justifyContent: "flex-end"}}>
+    <div
+      className="App"
+      style={{ display: "flex", justifyContent: "flex-end" }}
+    >
       <GlobalStyle isLight={lightMode} />
-      <Menu setOpenMenu={setOpenMenu} openMenu={openMenu} setOpenHome={setOpenHome} openHome={openHome}/>
+      <Menu
+        setOpenMenu={setOpenMenu}
+        openMenu={openMenu}
+        setOpenHome={setOpenHome}
+        openHome={openHome}
+      />
       <BrowserRouter>
         <Navbar
-          setOpenMenu={setOpenMenu} 
-          openMenu={openMenu} 
-          setlightMode={setlightMode} 
-          lightMode={lightMode} 
-          setOpenContact={setOpenContact} 
+          setOpenMenu={setOpenMenu}
+          openMenu={openMenu}
+          setlightMode={setlightMode}
+          lightMode={lightMode}
+          setOpenContact={setOpenContact}
           openContact={openContact}
-          setOpenHome={setOpenHome} 
+          setOpenHome={setOpenHome}
           openHome={openHome}
         />
         <Routes>
-          <Route path="/" element={ <HomePage setlightMode={setlightMode} lightMode={lightMode}/>} />
-          <Route path="contact" element={<ContactPage setlightMode={setlightMode} lightMode={lightMode}/>} />
-          <Route path="Work" element={<Work setlightMode={setlightMode} lightMode={lightMode}/>} />
+          <Route
+            path="/"
+            element={
+              <HomePage setlightMode={setlightMode} lightMode={lightMode} />
+            }
+          />
+          <Route
+            path="contact"
+            element={
+              <ContactPage setlightMode={setlightMode} lightMode={lightMode} />
+            }
+          />
+          <Route
+            path="Work"
+            element={<Work setlightMode={setlightMode} lightMode={lightMode} />}
+          />
         </Routes>
-      
-      {<WorkBtn setlightMode={setlightMode} lightMode={lightMode}/>}
-        
-      </BrowserRouter>
 
+        {<WorkBtn setlightMode={setlightMode} lightMode={lightMode} />}
+      </BrowserRouter>
     </div>
   );
 }

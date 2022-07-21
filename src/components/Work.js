@@ -1,23 +1,23 @@
-import {React, useState} from 'react'
-import styled from 'styled-components';
-import { primaryColor, primaryLightColor, WorkLinks} from './Common';
-import AbThumbnail from '../assets/img/ab-distribution.webp'
-import MutezaThumbnail from '../assets/img/muteza.webp'
-import OukhtyThumbnail from '../assets/img/oukhty.webp'
-import FolioThumbnail from '../assets/img/folio.webp'
-import FlowerThumbnail from '../assets/img/flower.webp'
-import EasyBankThumbnail from '../assets/img/esaybank.webp'
-import CoventicThumbnail from '../assets/img/coventic.webp'
-import NetflixThumbnail from '../assets/img/netflix.webp'
-import BlogrThumbnail from '../assets/img/blogr.webp'
-
+import { React, useState } from "react";
+import styled from "styled-components";
+import { primaryColor, primaryLightColor, WorkLinks } from "./Common";
+import AbThumbnail from "../assets/img/ab-distribution.webp";
+import MutezaThumbnail from "../assets/img/muteza.webp";
+import OukhtyThumbnail from "../assets/img/oukhty.webp";
+import FolioThumbnail from "../assets/img/folio.webp";
+import FlowerThumbnail from "../assets/img/flower.webp";
+import EasyBankThumbnail from "../assets/img/esaybank.webp";
+import CoventicThumbnail from "../assets/img/coventic.webp";
+import NetflixThumbnail from "../assets/img/netflix.webp";
+import BlogrThumbnail from "../assets/img/blogr.webp";
 
 const Container = styled.section`
   height: 100vh;
   width: calc(100% - 100px);
-  background-color: ${props => props.isLight === true ? primaryLightColor : primaryColor};
+  background-color: ${(props) =>
+    props.isLight === true ? primaryLightColor : primaryColor};
   display: flex;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 
   @media (min-width: 1400px) {
     width: calc(100% - 120px);
@@ -30,9 +30,7 @@ const Container = styled.section`
     height: calc(100vh - 100px);
     bottom: 0;
   }
-`
-
-
+`;
 
 const ContainerLeft = styled.div`
   height: 100%;
@@ -44,7 +42,7 @@ const ContainerLeft = styled.div`
     width: 100%;
     justify-content: flex-start;
   }
-`
+`;
 const ContainerRight = styled.div`
   height: 100%;
   width: 50%;
@@ -54,7 +52,7 @@ const ContainerRight = styled.div`
   @media (max-width: 850px) {
     display: none;
   }
-`
+`;
 
 const Content = styled.div`
   position: relative;
@@ -63,7 +61,7 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const Ul = styled.ul`
   height: auto;
@@ -73,22 +71,21 @@ const Ul = styled.ul`
   padding-right: 5rem;
 
   @media (max-width: 1100px) {
-   max-height: 650px;
+    max-height: 650px;
   }
 
   ::-webkit-scrollbar {
     cursor: pointer;
     border: none;
   }
-`
+`;
 const Li = styled.li`
   margin-bottom: 5rem;
   padding-left: 2rem;
   @media (max-width: 850px) {
     margin-bottom: 8rem;
   }
-`
-
+`;
 
 const Image = styled.img`
   position: absolute;
@@ -96,14 +93,10 @@ const Image = styled.img`
   width: 90%;
   transition: all 0.2s ease-in;
   border-radius: 15px;
-  opacity: ${props => props.isHover === true ? 1 : 0};
-`
-
-
+  opacity: ${(props) => (props.isHover === true ? 1 : 0)};
+`;
 
 function Work(lightMode, openWork) {
-
-
   const [hover, setHover] = useState(false);
   const [hover2, setHover2] = useState(false);
   const [hover3, setHover3] = useState(false);
@@ -142,106 +135,68 @@ function Work(lightMode, openWork) {
     setHover9(!hover9);
   };
 
-
   return (
     <Container isActive={openWork}>
-
       <ContainerLeft>
-
         <Ul>
-          
-        <Li onMouseEnter={onHover} onMouseLeave={onHover}>
-            <WorkLinks href='#' >
-              Oukhty Shop
-            </WorkLinks>
+          <Li onMouseEnter={onHover} onMouseLeave={onHover}>
+            <WorkLinks href="#">Oukhty Shop</WorkLinks>
           </Li>
           <Li onMouseEnter={onHover2} onMouseLeave={onHover2}>
-            <WorkLinks href='https://www.ab-distribution.re' >
+            <WorkLinks href="https://www.ab-distribution.re">
               Ab Distribution
             </WorkLinks>
           </Li>
           <Li onMouseEnter={onHover3} onMouseLeave={onHover3}>
-            <WorkLinks href='https://www.tonibusatta.fr' >
-              Porfolio V0
-            </WorkLinks>
+            <WorkLinks href="https://www.tonibusatta.fr">Porfolio V0</WorkLinks>
           </Li>
           <Li onMouseEnter={onHover4} onMouseLeave={onHover4}>
-            <WorkLinks href='https://tonii0.github.io/Muteza/' >
+            <WorkLinks href="https://tonii0.github.io/Muteza/">
               Muteza
             </WorkLinks>
           </Li>
           <Li onMouseEnter={onHover5} onMouseLeave={onHover5}>
-            <WorkLinks href='https://flytzwoo.github.io/Aliyahmarinabfleurs/' >
+            <WorkLinks href="https://flytzwoo.github.io/Aliyahmarinabfleurs/">
               Flower Shop
             </WorkLinks>
           </Li>
 
           <Li onMouseEnter={onHover8} onMouseLeave={onHover8}>
-            <WorkLinks href='https://tonii0.github.io/Netflix/' >
+            <WorkLinks href="https://tonii0.github.io/Netflix/">
               Netflix
             </WorkLinks>
           </Li>
           <Li onMouseEnter={onHover6} onMouseLeave={onHover6}>
-            <WorkLinks href='https://tonii0.github.io/EasyBank/' >
+            <WorkLinks href="https://tonii0.github.io/EasyBank/">
               Easy Bank
             </WorkLinks>
           </Li>
           <Li onMouseEnter={onHover7} onMouseLeave={onHover7}>
-            <WorkLinks href='https://tonii0.github.io/Coventic/' >
+            <WorkLinks href="https://tonii0.github.io/Coventic/">
               Coventic
             </WorkLinks>
           </Li>
           <Li onMouseEnter={onHover9} onMouseLeave={onHover9}>
-            <WorkLinks href='https://tonii0.github.io/Blogr/' >
-              Blogr
-            </WorkLinks>
+            <WorkLinks href="https://tonii0.github.io/Blogr/">Blogr</WorkLinks>
           </Li>
- 
-          
         </Ul>
-
-
       </ContainerLeft>
 
       <ContainerRight>
-
         <Content>
-
-          <Image isHover={hover}
-            src={OukhtyThumbnail}
-          />
-          <Image isHover={hover2}
-            src={AbThumbnail}
-          />
-          <Image isHover={hover3}
-            src={FolioThumbnail}
-          />
-          <Image isHover={hover4}
-            src={MutezaThumbnail}
-          />
-          <Image isHover={hover5}
-            src={FlowerThumbnail}
-          />
-          <Image isHover={hover6}
-            src={EasyBankThumbnail}
-          />
-          <Image isHover={hover7}
-            src={CoventicThumbnail}
-          />
-          <Image isHover={hover8}
-            src={NetflixThumbnail}
-          />
-          <Image isHover={hover9}
-            src={BlogrThumbnail}
-          />
-
+          <Image isHover={hover} src={OukhtyThumbnail} />
+          <Image isHover={hover2} src={AbThumbnail} />
+          <Image isHover={hover3} src={FolioThumbnail} />
+          <Image isHover={hover4} src={MutezaThumbnail} />
+          <Image isHover={hover5} src={FlowerThumbnail} />
+          <Image isHover={hover6} src={EasyBankThumbnail} />
+          <Image isHover={hover7} src={CoventicThumbnail} />
+          <Image isHover={hover8} src={NetflixThumbnail} />
+          <Image isHover={hover9} src={BlogrThumbnail} />
         </Content>
-
       </ContainerRight>
-
-              
     </Container>
-  )
+  );
 }
 
-export default Work
+export default Work;
