@@ -274,14 +274,10 @@ const LinksIcon = styled.a`
   }
 `;
 
-// const Navbar = (props) => {
-// const { openMenu, setOpenMenu, toto } = props
-// props.openMenu
 const Navbar = ({
   openMenu,
   setOpenMenu,
   lightMode,
-  openContact,
   setOpenContact,
   setOpenHome,
 }) => {

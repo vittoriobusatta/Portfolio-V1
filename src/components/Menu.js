@@ -123,7 +123,7 @@ const BottomContainer = styled.div`
   }
 `;
 
-function Menu({ openMenu, setOpenMenu, lightMode, setlightMode }) {
+function Menu({ openMenu, lightMode }) {
   return (
     <MenuContainer isLight={lightMode} isActive={openMenu}>
       <TopContainer>

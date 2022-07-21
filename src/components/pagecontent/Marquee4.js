@@ -33,7 +33,7 @@ const MarqueeC = styled(MarqueeContent)`
     ${(props) => (props.isLight === true ? thirdLightColor : thirdColor)};
 `;
 
-function Marquee({ lightMode, setlightMode }) {
+function Marquee({ lightMode }) {
   return (
     <ContainerMarquee>
       <MarqueeC isLight={lightMode}>

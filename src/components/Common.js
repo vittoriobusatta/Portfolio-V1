@@ -19,7 +19,7 @@ export const LinksA = styled.a`
   font-size: max(1.2rem);
   writing-mode: vertical-lr;
   color: ${(props) =>
-  props.isLight === true ? secondLightColor : secondColor};
+    props.isLight === true ? secondLightColor : secondColor};
   font-family: ${roboto};
   text-transform: uppercase;
   transition: all 0.3s ease-out;
@@ -41,6 +41,7 @@ export const WorkLinks = styled.a`
   &::before {
     position: absolute;
     content: "";
+    left: -20px;
     top: 15px;
     font-size: max(3rem);
     font-family: ${ancient};

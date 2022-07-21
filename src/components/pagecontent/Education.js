@@ -60,10 +60,9 @@ const ScolarityContent = styled.div`
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   @media (max-width: 850px) {
-    grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr 0.06fr 0.5fr repeat(
-        6,
-        1fr
-      ) 0.5fr;
+    grid-template-columns:
+      0.5fr repeat(4, 1fr) 0.5fr 0.06fr 0.5fr repeat(6, 1fr)
+      0.5fr;
   }
   @media (max-width: 400px) {
     grid-template-columns: 0.2fr 2fr 0.5fr 0.05fr 0.8fr 2fr 0.2fr;
@@ -331,7 +330,7 @@ const Span = styled.a`
   }
 `;
 
-function education({ lightMode, setlightMode }) {
+function education({ lightMode }) {
   return (
     <EducationContainer>
       <EducationContainerLeft>
@@ -372,14 +371,14 @@ function education({ lightMode, setlightMode }) {
                   cy="164"
                   r="162.5"
                   stroke="#95ADCF"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
                 <circle
                   cx="164"
                   cy="184"
                   r="162.5"
                   stroke="#95ADCF"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
               </Svg>
               <CuriculumText isLight={lightMode}>DOWNLOAD CV</CuriculumText>

@@ -130,7 +130,7 @@ const Image = styled.div`
   background-position: bottom;
 `;
 
-function About({ lightMode, setlightMode }) {
+function About({ lightMode }) {
   return (
     <AboutContainer>
       <AboutContainerLeft>

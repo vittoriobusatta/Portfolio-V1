@@ -188,7 +188,7 @@ const ContentProjectLink = styled.a`
   }
 `;
 
-function Work({ lightMode, setlightMode }) {
+function Work({ lightMode }) {
   return (
     <WorkContainer>
       <ContainerTitle>
@@ -265,8 +265,8 @@ function Work({ lightMode, setlightMode }) {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M6.579 1.413H0.504V0H9V8.496H7.587V2.43L0.99 9L0 8.001L6.579 1.413Z"
                     fill="#FFEDCB"
                   />
@@ -336,8 +336,8 @@ function Work({ lightMode, setlightMode }) {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M6.579 1.413H0.504V0H9V8.496H7.587V2.43L0.99 9L0 8.001L6.579 1.413Z"
                     fill="#FFEDCB"
                   />
@@ -407,8 +407,8 @@ function Work({ lightMode, setlightMode }) {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M6.579 1.413H0.504V0H9V8.496H7.587V2.43L0.99 9L0 8.001L6.579 1.413Z"
                     fill="#FFEDCB"
                   />
@@ -478,8 +478,8 @@ function Work({ lightMode, setlightMode }) {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M6.579 1.413H0.504V0H9V8.496H7.587V2.43L0.99 9L0 8.001L6.579 1.413Z"
                     fill="#FFEDCB"
                   />
@@ -549,8 +549,8 @@ function Work({ lightMode, setlightMode }) {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M6.579 1.413H0.504V0H9V8.496H7.587V2.43L0.99 9L0 8.001L6.579 1.413Z"
                     fill="#FFEDCB"
                   />
