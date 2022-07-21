@@ -506,7 +506,7 @@ function Work({ lightMode }) {
                 <ContentProjectLink
                   isLight={lightMode}
                   target="_blank"
-                  href="https://flytzwoo.github.io/Aliyahmarinabfleurs/"
+                  href="https://vittoriobusatta.github.io/Aliyahmarinabfleurs/"
                 >
                   <Vector
                     isLight={lightMode}
