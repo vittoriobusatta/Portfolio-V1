@@ -5,10 +5,10 @@ export const secondColor = "#FFEDCB";
 export const thirdColor = "#95ADCF";
 export const fourthColor = "#F1F1F1";
 
-export const primaryLightColor = "#D9F4FE";
-export const secondLightColor = "#00B2FD";
-export const thirdLightColor = "#8A2233";
-export const fourthLightColor = "#FF5945";
+export const primaryLightColor = "#086788";
+export const secondLightColor = "#98E2C6";
+export const thirdLightColor = "#98B9F2";
+export const fourthLightColor = "#BFEDEF";
 
 export const morgenWalsh = "Morgenwalsh";
 export const roboto = "Roboto Flex, sans-serif;";
