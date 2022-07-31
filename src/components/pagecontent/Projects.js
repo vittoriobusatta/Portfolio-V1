@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import AbThumbnail from "../../assets/img/ab-distribution.webp";
 import MutezaThumbnail from "../../assets/img/muteza.webp";
-import OukhtyThumbnail from "../../assets/img/oukhty.webp";
+// import OukhtyThumbnail from "../../assets/img/oukhty.webp";
 import FolioThumbnail from "../../assets/img/folio.webp";
+import SunsideThumbnail from "../../assets/img/sunside.webp";
 import FlowerThumbnail from "../../assets/img/flower.webp";
 
 import {
@@ -82,7 +83,7 @@ const Muteza = styled.div`
     grid-area: 27 / 2 / 39 / 6;
   }
 `;
-const HijabStore = styled.div`
+const Sunnyside = styled.div`
   grid-area: 12 / 9 / 18 / 14;
   @media (max-width: 850px) {
     grid-area: 41 / 2 / 53 / 6;
@@ -347,8 +348,8 @@ function Work({ lightMode }) {
           </Content>
         </Muteza>
 
-        <HijabStore>
-          <Thumbnails src={OukhtyThumbnail} className="HijabStore"></Thumbnails>
+        <Sunnyside>
+          <Thumbnails src={SunsideThumbnail} className="Sunnyside"></Thumbnails>
 
           <Content>
             <ContentProject>
@@ -364,7 +365,7 @@ function Work({ lightMode }) {
                 <ContentProjectLink
                   isLight={lightMode}
                   target="_blank"
-                  href="https://www.ab-distribution.re"
+                  href="https://sunnyside-p9e3uimjz-vittoriobusatta.vercel.app/"
                 >
                   <Vector
                     isLight={lightMode}
@@ -416,7 +417,7 @@ function Work({ lightMode }) {
               </div>
             </DateProject>
           </Content>
-        </HijabStore>
+        </Sunnyside>
 
         <Folio>
           <Thumbnails src={FolioThumbnail} className="Folio"></Thumbnails>

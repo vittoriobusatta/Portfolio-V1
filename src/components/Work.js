@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { primaryColor, primaryLightColor, WorkLinks } from "./Common";
 import AbThumbnail from "../assets/img/ab-distribution.webp";
 import MutezaThumbnail from "../assets/img/muteza.webp";
-import OukhtyThumbnail from "../assets/img/oukhty.webp";
+// import OukhtyThumbnail from "../assets/img/oukhty.webp";
+import SunsideThumbnail from "../assets/img/sunside.webp";
 import FolioThumbnail from "../assets/img/folio.webp";
 import FlowerThumbnail from "../assets/img/flower.webp";
 import EasyBankThumbnail from "../assets/img/esaybank.webp";
@@ -92,7 +93,7 @@ const Image = styled.img`
   height: auto;
   width: 90%;
   transition: all 0.2s ease-in;
-  border-radius: 15px;
+  border-radius: 10px;
   opacity: ${(props) => (props.isHover === true ? 1 : 0)};
 `;
 
@@ -140,7 +141,7 @@ function Work(lightMode, openWork) {
       <ContainerLeft>
         <Ul>
           <Li onMouseEnter={onHover} onMouseLeave={onHover}>
-            <WorkLinks href="#">Oukhty Shop</WorkLinks>
+            <WorkLinks href="https://sunnyside-p9e3uimjz-vittoriobusatta.vercel.app/">Sunside</WorkLinks>
           </Li>
           <Li onMouseEnter={onHover2} onMouseLeave={onHover2}>
             <WorkLinks href="https://www.ab-distribution.re">
@@ -184,7 +185,7 @@ function Work(lightMode, openWork) {
 
       <ContainerRight>
         <Content>
-          <Image isHover={hover} src={OukhtyThumbnail} />
+          <Image isHover={hover} src={SunsideThumbnail} />
           <Image isHover={hover2} src={AbThumbnail} />
           <Image isHover={hover3} src={FolioThumbnail} />
           <Image isHover={hover4} src={MutezaThumbnail} />
