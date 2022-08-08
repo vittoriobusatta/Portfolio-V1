@@ -1,11 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import AbThumbnail from "../../assets/img/ab-distribution.webp";
-import MutezaThumbnail from "../../assets/img/muteza.webp";
-// import OukhtyThumbnail from "../../assets/img/oukhty.webp";
-import FolioThumbnail from "../../assets/img/folio.webp";
-import SunsideThumbnail from "../../assets/img/sunside.webp";
-import FlowerThumbnail from "../../assets/img/flower.webp";
 
 import {
   secondColor,
@@ -217,7 +211,7 @@ function Work({ lightMode }) {
         <Div1></Div1>
 
         <AbDistribution>
-          <Thumbnails src={AbThumbnail}></Thumbnails>
+          <Thumbnails></Thumbnails>
 
           <Content>
             <ContentProject>
@@ -278,7 +272,7 @@ function Work({ lightMode }) {
         </AbDistribution>
 
         <Muteza>
-          <Thumbnails src={MutezaThumbnail} className="Muteza"></Thumbnails>
+          <Thumbnails className="Muteza"></Thumbnails>
 
           <Content>
             <ContentProject>
@@ -349,7 +343,7 @@ function Work({ lightMode }) {
         </Muteza>
 
         <Sunnyside>
-          <Thumbnails src={SunsideThumbnail} className="Sunnyside"></Thumbnails>
+          <Thumbnails className="Sunnyside"></Thumbnails>
 
           <Content>
             <ContentProject>
@@ -420,7 +414,7 @@ function Work({ lightMode }) {
         </Sunnyside>
 
         <Folio>
-          <Thumbnails src={FolioThumbnail} className="Folio"></Thumbnails>
+          <Thumbnails className="Folio"></Thumbnails>
 
           <Content>
             <ContentProject>
@@ -491,7 +485,7 @@ function Work({ lightMode }) {
         </Folio>
 
         <FlowerShop>
-          <Thumbnails src={FlowerThumbnail} className="FlowerShop"></Thumbnails>
+          <Thumbnails className="FlowerShop"></Thumbnails>
 
           <Content>
             <ContentProject>

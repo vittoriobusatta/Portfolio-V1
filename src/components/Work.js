@@ -1,16 +1,6 @@
 import { React, useState } from "react";
 import styled from "styled-components";
 import { primaryColor, primaryLightColor, WorkLinks } from "./Common";
-import AbThumbnail from "../assets/img/ab-distribution.webp";
-import MutezaThumbnail from "../assets/img/muteza.webp";
-// import OukhtyThumbnail from "../assets/img/oukhty.webp";
-import SunsideThumbnail from "../assets/img/sunside.webp";
-import FolioThumbnail from "../assets/img/folio.webp";
-import FlowerThumbnail from "../assets/img/flower.webp";
-import EasyBankThumbnail from "../assets/img/esaybank.webp";
-import CoventicThumbnail from "../assets/img/coventic.webp";
-import NetflixThumbnail from "../assets/img/netflix.webp";
-import BlogrThumbnail from "../assets/img/blogr.webp";
 
 const Container = styled.section`
   height: 100vh;
@@ -185,15 +175,7 @@ function Work(lightMode, openWork) {
 
       <ContainerRight>
         <Content>
-          <Image isHover={hover} src={SunsideThumbnail} />
-          <Image isHover={hover2} src={AbThumbnail} />
-          <Image isHover={hover3} src={FolioThumbnail} />
-          <Image isHover={hover4} src={MutezaThumbnail} />
-          <Image isHover={hover5} src={FlowerThumbnail} />
-          <Image isHover={hover6} src={EasyBankThumbnail} />
-          <Image isHover={hover7} src={CoventicThumbnail} />
-          <Image isHover={hover8} src={NetflixThumbnail} />
-          <Image isHover={hover9} src={BlogrThumbnail} />
+          <Image isHover={hover}/>
         </Content>
       </ContainerRight>
     </Container>

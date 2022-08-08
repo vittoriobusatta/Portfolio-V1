@@ -1,5 +1,5 @@
-import "./font.css";
-import "./reset.css";
+import "./Assets/Styles/font.css";
+import "./Assets/Styles/reset.css";
 import { createGlobalStyle } from "styled-components";
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
@@ -8,14 +8,9 @@ import HomePage from "./components/Homepage";
 import ContactPage from "./components/ContactPage";
 import Work from "./components/Work";
 import WorkBtn from "./components/WorkBtn";
-import {
-  secondColor,
-  primaryLightColor,
-  primaryColor,
-  secondLightColor,
-  thirdLightColor,
-  thirdColor,
-} from "./components/Common";
+import Loader from "./components/Loader";
+import { primaryLightColor, primaryColor } from "./components/Common";
+import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
@@ -23,8 +18,11 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    transition: all .3s ease-in;
-
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    ::-webkit-scrollbar{
+      display: none;
+    }
     @media (max-width: 1200px) {
       font-size: 50%;
     }
@@ -53,21 +51,6 @@ const GlobalStyle = createGlobalStyle`
     background: ${(props) => (props.isLight === true ? "#AAAE8E" : "#305275")};
     text-shadow: none;
   }
-  ::-webkit-scrollbar{
-    width: 10px;
-    border-left: 2px solid ${(props) =>
-      props.isLight === true ? thirdLightColor : thirdColor};
-  }
-  ::-webkit-scrollbar-thumb{
-    background-color: ${(props) =>
-      props.isLight === true ? secondLightColor : secondColor};
-    transition: all .3s ease-in;
-    border-radius: 15px;
-    &:hover {
-      background-color: ${(props) =>
-        props.isLight === true ? thirdLightColor : thirdColor};
-    }
-  }
 `;
 
 function App() {
@@ -77,6 +60,28 @@ function App() {
 
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
+
+  const [projectsData, setProjectsData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  function fetchPaintingsData() {
+    setIsLoading(true);
+    axios
+      .get("./Json/data.json")
+      .then((res) => {
+        setProjectsData(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  
+  console.log(projectsData);
+
+  useEffect(() => {
+    fetchPaintingsData();
+  }, []);
 
   const checkIsMobile = () => {
     return window.matchMedia("(max-width: 850px)").matches;
@@ -109,7 +114,9 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop, openMenu]);
 
-  return (
+  return isLoading ? (
+    <Loader />
+  ) : (
     <div
       className="App"
       style={{ display: "flex", justifyContent: "flex-end" }}
