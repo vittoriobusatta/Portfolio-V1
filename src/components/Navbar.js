@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ReactComponent as DribbleIcon } from "../icons/dribbble.svg";
-import { ReactComponent as GithubIcon } from "../icons/github.svg";
-import { ReactComponent as TwitterIcon } from "../icons/twitter.svg";
+import { ReactComponent as DribbleIcon } from "../Assets/Icons/dribbble.svg";
+import { ReactComponent as GithubIcon } from "../Assets/Icons/github.svg";
+import { ReactComponent as TwitterIcon } from "../Assets/Icons/twitter.svg";
 import {
   primaryColor,
   primaryLightColor,

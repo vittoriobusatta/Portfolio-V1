@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Galleria",
+    "date": "Aug. 2022",
+    "images": {
+      "thumbnail": {
+        "small": "",
+        "large": "../Images/galleria.png"
+      }
+    }
+  },
+  {
+    "name": "AB Distribution",
+    "date": "May. 2022",
+    "images": {
+      "thumbnail": {
+        "small": "",
+        "large": "../Images/ab-distribution.webp"
+      }
+    }
+  },
+  {
+    "name": "Sunnyside",
+    "date": "Jul. 2022",
+    "images": {
+      "thumbnail": {
+        "small": "",
+        "large": "../Images/ab-distribution.webp"
+      }
+    }
+  },
+  {
+    "name": "Muteza",
+    "date": "May. 2021",
+    "images": {
+      "thumbnail": {
+        "small": "",
+        "large": "../Images/muteza.webp"
+      }
+    }
+  },
+  {
+    "name": "Portfolio",
+    "date": "May. 2021",
+    "images": {
+      "thumbnail": {
+        "small": "",
+        "large": "../Images/folio.webp"
+      }
+    }
+  }
+]

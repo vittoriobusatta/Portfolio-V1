@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "../../assets/img/PP.webp";
+import Img from "../../Assets/Images/PP.webp";
 import {
   secondColor,
   secondLightColor,

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Marquee from "./pagecontent/Marquee";
 import Marquee2 from "./pagecontent/Marquee2";
 import Marquee3 from "./pagecontent/Marquee3";
-import Marquee4 from "./pagecontent/Marquee4";
 import Education from "./pagecontent/Education";
 import Landing from "./pagecontent/Landing";
 import Work from "./pagecontent/Projects";
@@ -34,15 +33,14 @@ const HomePageContainer = styled.main`
 const landing = ({ lightMode, setlightMode }) => {
   return (
     <HomePageContainer isLight={lightMode}>
-      <DarkBtn setlightMode={setlightMode} lightMode={lightMode} />
+      {/* <DarkBtn setlightMode={setlightMode} lightMode={lightMode} /> */}
       <Landing setlightMode={setlightMode} lightMode={lightMode} />
       <Marquee setlightMode={setlightMode} lightMode={lightMode} />
       <Education setlightMode={setlightMode} lightMode={lightMode} />
-      <Marquee2 setlightMode={setlightMode} lightMode={lightMode} />
+      {/* <Marquee2 setlightMode={setlightMode} lightMode={lightMode} />
       <Work setlightMode={setlightMode} lightMode={lightMode} />
       <Marquee3 setlightMode={setlightMode} lightMode={lightMode} />
-      <About setlightMode={setlightMode} lightMode={lightMode} />
-      <Marquee4 setlightMode={setlightMode} lightMode={lightMode} />
+      <About setlightMode={setlightMode} lightMode={lightMode} /> */}
     </HomePageContainer>
   );
 };
